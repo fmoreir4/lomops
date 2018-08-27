@@ -104,14 +104,11 @@ function listar($dados){
             FROM cliente, endereco 
             WHERE cliente.cep = endereco.cep
             and cliente.nome like '$dados'";
-    
-    //Mostra a linha do SQL
-    //var_dump($sql);
 
-    //Busca os dados do cliente no banco de dados
+//Busca os dados do cliente no banco de dados
     $result = mysqli_query($link, $sql);
 
-    //Verifica seexiste dados do cliente
+    //Verifica se existem dados do cliente
     if (!$result){
         printf("Error: ", mysqli_error($link));
         alerta("Não localizado");
@@ -120,6 +117,7 @@ function listar($dados){
     //Fecha a conexão com o anco de dados
     mysqli_close($link);
 
+    //Retorna o resultado encontrado
     return $result;      
 }
 
@@ -137,8 +135,11 @@ function login($email, $pws){
                 pws = $pws";
 
     $result = mysqli_query($link, $sql);
+    //Se o resultdo for igual a 1
     if (mysqli_num_rows($result) == 1){
+        //Inicia o uso de session
         session_start();
+        //Cria uma session de nome cliente
         $_SESSION['cliente'] = $result;
         header("Location: index.php");
     } else {
