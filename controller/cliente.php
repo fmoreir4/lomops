@@ -13,7 +13,7 @@ if (isset($_REQUEST['acao'])){
     }
 
     if ($acao == "listar"){
-        $cliente = listar($_POST['dados']);
+         $cliente = listar($_POST['dados']);    
     }
 }
 
@@ -140,7 +140,7 @@ function login($email, $pws){
         //Inicia o uso de session
         session_start();
         //Cria uma session de nome cliente
-        $_SESSION['cliente'] = $result;
+        $_SESSION['cliente'] = mysqli_fetch_array($result);
         header("Location: index.php");
     } else {
         //printf("Error: ", mysqli_error($link));

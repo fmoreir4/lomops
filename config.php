@@ -9,5 +9,5 @@ ini_set("display_errors", 1);
 //Define variaveis globais para o sistema
 define("LOCAL","localhost");
 define("USER","root");
-define("PASS","");
+define("PASS","12345");
 define("BANCO","lomops");

@@ -1,17 +1,8 @@
-/* Todos */
-* { margin:0; padding:0; box-sizing: border-box}
-
 /* Geral */
 .direita{float:right}
 .esquerda{float:left}
 .clearflix{float:none; clear:bold}
-.center{margin:auto; text-align:center}
-.container{
-	width:100%;
-	min-width:320px;
-	max-width:1280px;
-	margin:auto;
-}
+.centro{margin:auto; text-align:center}
 
 /* Cores */
 .preto{ color:#222 }
@@ -19,64 +10,16 @@
 .branco{ color:#999 }
 .bg-branco{ background-color:#999 }
 
-/* Mensagens */
-.msg{padding: 10px; border-radius: 5px}
-.msg h3{font-weight: 800}
-.aviso{color:#050;background-color: #484 }
-.erro{color:#500;background-color: #844 }
-.alerta{color:#cb1;background-color: #dc0 }
-
 /* Corpo */
 body{
 	font-family: verdana, arial;
 	font-size: 18px;
-	color: #444;
+	color: #333;
 }
 
-/* Cabeçalho */
-header{
+/* Cabeçalho e Rodape */
+header, footer{
 	height: 100%;
-	min-height: 100px;
-}
-
-/* Menu */
-nav{
-	height:100%;
-	min-height: 60px;
-}
-
-nav ul{
-	display:inline;
-}
-
-nav ul li{
-	line-height:60px;
-	display:inline-block;
-}
-
-nav ul li a{
-	text-decoration:none;
-	color:#fff;
-	padding: 15px 20px;
-}
-
-nav ul li a:hover{
-	background-color:#fff;
-	color:#222;
-}
-
-/* Formularios */
-label{
-	display:block;
-	margin-top:10px;
-}
-
-button{
-	padding: 10px 20px;	
-}
-
-input, select{
-	width:100%;
-	padding:5px;
+	min-height: 200px;
 }
 
