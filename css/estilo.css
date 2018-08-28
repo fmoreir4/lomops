@@ -20,6 +20,8 @@ body{
 /* Cabeçalho e Rodape */
 header, footer{
 	height: 100%;
-	min-height: 200px;
+	min-height: 100px;
 }
-
+.perfil{
+	width: 50px;
+}
